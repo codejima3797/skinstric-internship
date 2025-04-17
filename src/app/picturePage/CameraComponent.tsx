@@ -30,6 +30,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
     null
   );
   const [isLoading, setIsLoading] = useState(true);
+  const [stream, setStream] = useState<MediaStream | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -116,6 +117,32 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
       }
     };
   }, [initialStream, isFullScreen]);
+
+  useEffect(() => {
+    if (stream) {
+      const video = videoRef.current;
+      if (video) {
+        video.srcObject = stream;
+        video.play().catch((error) => {
+          console.error("Error playing video:", error);
+        });
+      }
+
+      return () => {
+        const video = videoRef.current;
+        if (video) {
+          video.srcObject = null;
+        }
+        stream.getTracks().forEach((track) => track.stop());
+      };
+    }
+  }, [stream]);
+
+  useEffect(() => {
+    if (initialStream) {
+      setStream(initialStream);
+    }
+  }, [initialStream]);
 
   useEffect(() => {}, [isFullScreen, videoReady, initialStream]);
 
@@ -328,19 +355,15 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
             </>
           ) : (
             <>
-              <img
-                src={capturedImageData}
-                alt="captured"
-                className="w-full h-full object-cover"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  zIndex: 1,
-                }}
-              />
+              <div className="absolute top-0 left-0 w-full h-full">
+                <Image
+                  src={capturedImageData}
+                  alt="Captured"
+                  width={640}
+                  height={480}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="absolute top-[30%] left-1/2 transform -translate-x-1/2 text-white text-xl font-medium z-20">
                 GREAT SHOT!
               </div>

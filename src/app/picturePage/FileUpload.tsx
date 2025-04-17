@@ -10,7 +10,7 @@ interface UploadResponse {
 
 interface FileUploadProps {
   onUploadSuccess: (response: UploadResponse) => void;
-  onUploadError?: (error: any) => void;
+  onUploadError?: (error: Error | unknown) => void;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({

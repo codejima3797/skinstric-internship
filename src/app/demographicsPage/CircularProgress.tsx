@@ -13,7 +13,7 @@ const CircularProgress = ({ percentage, isVisible, className = '' }: CircularPro
 
   useEffect(() => {
     if (isVisible) {
-      const duration = 700;
+      const duration = 500;
       const startTime = performance.now();
       const startProgress = progress;
       const progressDiff = percentage - startProgress;
@@ -32,7 +32,7 @@ const CircularProgress = ({ percentage, isVisible, className = '' }: CircularPro
     } else {
       setProgress(0);
     }
-  }, [percentage, isVisible]);
+  }, [percentage, isVisible, progress]);
 
   // Ensure strokeDashoffset is always a valid number
   const strokeDashoffset = Math.max(0, circumference - ((progress || 0) / 100) * circumference);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Navbar } from "../components/Navbar";
 import { useRouter } from "next/navigation";
@@ -29,7 +29,7 @@ const DemographicsPage = () => {
   const [demographicsData, setDemographicsData] =
     useState<DemographicsData | null>(null);
 
-  const ageRanges = [
+  const ageRanges = useMemo(() => [
     "0-9",
     "10-19",
     "20-29",
@@ -38,7 +38,7 @@ const DemographicsPage = () => {
     "50-59",
     "60-69",
     "70+",
-  ];
+  ], []);
 
   useEffect(() => {
     const storedData = localStorage.getItem("demographicsData");
@@ -75,7 +75,7 @@ const DemographicsPage = () => {
     } else {
       router.push("/picturePage");
     }
-  }, [router]);
+  }, [router, ageRanges]);
 
   const generateListItems = (): ListItem[] => {
     if (!demographicsData) return [];
