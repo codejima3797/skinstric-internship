@@ -40,7 +40,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
 
   return (
     <div className="w-full h-full relative">
-      <div className="absolute xl:top-[45%] xl:right-[30%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[35%] -right-[35%]">
+      <div className="absolute xl:top-[45%] xl:right-[30%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[40%] -right-[35%]">
         <div className="relative">
           <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[350px] md:h-[350px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
             <PictureSquares size="small" />
