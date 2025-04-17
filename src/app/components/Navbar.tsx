@@ -7,8 +7,8 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ isInverted, variant = 'intro' }) => {
   return (
-    <nav className={`w-full h-auto flex items-center ${isInverted ? 'invert' : ''}`}>
-      <div className="w-[120px] h-[56px] flex items-center justify-between ml-6">
+    <nav className={`w-full h-auto relative flex items-center ${isInverted ? 'invert' : ''}`}>
+      <div className="w-[120px] flex items-center justify-between absolute top-4 left-6">
         <Image 
           src="/skinstric-navbar.png"
           alt="Skinstric Navbar"
