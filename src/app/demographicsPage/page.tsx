@@ -265,7 +265,7 @@ const DemographicsPage = () => {
           />
         </div>
       </div>
-      <div className="w-full absolute bottom-[4%] flex items-center justify-between pl-3 pr-7">
+      <div className="w-full absolute bottom-[3%] flex items-center justify-between pl-3 pr-7">
         <Image
           src="/button-icon-text-back-b.png"
           alt="back button"
