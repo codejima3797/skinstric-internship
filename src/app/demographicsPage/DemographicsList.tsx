@@ -46,16 +46,16 @@ const DemographicsList: React.FC<DemographicsListProps> = ({
               onClick={() => onSelect(item.label)}
             >
               <div className="flex items-center gap-2">
-                <div className="w-[14px] h-[14px] relative">
+                <div className="min-w-[14px] min-h-[14px] w-[14px] h-[14px] relative">
                   <Image
                     src="/outer-diamond-race.png"
                     alt="outer diamond"
                     width={14}
                     height={14}
-                    className={item.isSelected ? "" : "invert"}
+                    className={`w-[14px] h-[14px] ${item.isSelected ? "" : "invert"}`}
                   />
                   <Image
-                    src="/outer-diamond-race.png"
+                    src="/inner-diamond-race.png"
                     alt="inner diamond"
                     width={7}
                     height={7}
