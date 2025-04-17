@@ -31,6 +31,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
   );
   const [isLoading, setIsLoading] = useState(true);
   const [stream, setStream] = useState<MediaStream | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -146,8 +147,46 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
 
   useEffect(() => {}, [isFullScreen, videoReady, initialStream]);
 
+  useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(isMobileDevice);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const startCamera = async () => {
     try {
+      if (isMobile) {
+        // Create a file input element for mobile devices
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.capture = 'environment'; // Use back camera if available
+        
+        input.onchange = async (e) => {
+          const file = (e.target as HTMLInputElement).files?.[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+              if (event.target?.result) {
+                setCapturedImageData(event.target.result as string);
+                if (onCapture) {
+                  onCapture(event.target.result as string);
+                }
+              }
+            };
+            reader.readAsDataURL(file);
+          }
+        };
+        
+        input.click();
+        return;
+      }
+
       if (initialStream) {
         initialStream.getTracks().forEach((track) => {
           track.stop();
