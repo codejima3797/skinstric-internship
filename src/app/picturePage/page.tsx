@@ -101,7 +101,7 @@ const PicturePage = () => {
               />
             </div>
             {uploadedImageData && (
-              <div className="w-[120px] h-[46px] cursor-pointer" onClick={handleProceed}>
+              <div className="w-[120px] h-[46px] cursor-pointer pt-1" onClick={handleProceed}>
                 <Image
                   src="/button-icon-text-proceed.png"
                   alt="proceed"
