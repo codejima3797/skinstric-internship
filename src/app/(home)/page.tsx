@@ -32,7 +32,7 @@ export default function Home() {
           alt="description"
           width={270}
           height={60}
-          className="absolute h-auto w-[200px] md:w-[240px] lg:w-[270px] left-4 xl:bottom[2%] lg:[2%] md:bottom-[2%] sm:bottom-[3%] bottom-[8%] md:left-[2%]"
+          className="absolute h-auto w-[200px] md:w-[240px] lg:w-[270px] left-4 xl:bottom-0 lg:[2%] md:bottom-[2%] sm:bottom-[3%] bottom-[8%] md:left-[2%]"
         />
       </div>
     </div>

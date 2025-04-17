@@ -177,7 +177,7 @@ const DemographicsPage = () => {
   return (
     <div className="w-full h-screen overflow-hidden">
       <Navbar variant="analysis" />
-      <header className="w-[500px] pl-6 xl:pt-0 lg:pt-0 md:pt-0 sm:pt-4 pt-5">
+      <header className="w-[500px] pl-6 xl:pt-0 lg:pt-0 md:pt-0 sm:pt-4 mt-12">
         <div className="h-[24px] text-[14px] font-[600] leading-[24px]">
           A.I. ANALYSIS
         </div>

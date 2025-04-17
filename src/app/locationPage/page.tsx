@@ -94,7 +94,7 @@ const LocationPage = () => {
           </div>
         )}
         <div
-          className="absolute left-[2%] bottom-[5%] sm:bottom-[10%] hover:cursor-pointer w-[80px] sm:w-[100px] h-auto"
+          className="absolute left-[2%] bottom-[4%] hover:cursor-pointer w-[80px] sm:w-[100px] h-auto"
           onClick={() => router.push("/introPage")}
         >
           <Image
@@ -107,7 +107,7 @@ const LocationPage = () => {
         </div>
         {inputValue.trim() && (
           <div
-            className="absolute right-[2%] bottom-[5%] sm:bottom-[10%] hover:cursor-pointer w-[100px] sm:w-[127px] h-auto"
+            className="absolute right-[2%] bottom-[4%] hover:cursor-pointer w-[100px] sm:w-[127px] h-auto"
             onClick={handleProceed}
           >
             <Image
