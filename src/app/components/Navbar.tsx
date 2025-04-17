@@ -1,6 +1,4 @@
-import Image from "next/image";
-import IntroNavbarImage from "../../../public/intro-navbar.png";
-import AnalysisNavbarImage from "../../../public/analysis-navbar.png";
+
 
 interface NavbarProps {
   isInverted?: boolean;
@@ -10,10 +8,9 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ isInverted, variant = 'intro' }) => {
   return (
     <nav className={`w-full h-auto flex items-center ${isInverted ? 'invert' : ''}`}>
-      <Image 
-        src={variant === 'intro' ? IntroNavbarImage : AnalysisNavbarImage} 
-        alt="Navbar"
-      />
+      <div className="relative w-full h-[64px]">
+
+      </div>
     </nav>
   );
 };
