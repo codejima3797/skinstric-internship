@@ -294,7 +294,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
       )}
       {!isFullScreen ? (
         <>
-          <div className="absolute xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[50%] -left-[44%]">
+          <div className="absolute xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[60%] -left-[44%]">
             <div className="relative">
               <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[380px] md:h-[380px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
                 <PictureSquares size="small" />
