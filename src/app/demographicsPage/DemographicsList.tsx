@@ -29,7 +29,7 @@ const DemographicsList: React.FC<DemographicsListProps> = ({
         height={250}
         className="w-full h-full border-t-2 border-black"
       />
-      <div className="absolute inset-0 xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[14px] text-[12px]">
+      <div className="absolute inset-0 xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[14px] text-[12px] leading-3.5">
         <div className="w-full h-[30px] flex justify-between items-center px-3 opacity-80">
           <div className="flex items-center gap-2">
             {selectedOption.toUpperCase()}

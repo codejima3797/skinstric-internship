@@ -182,12 +182,12 @@ const DemographicsPage = () => {
           A.I. ANALYSIS
         </div>
         <div className="h-[64px] xl:text-[48px] lg:text-[48px] md:text-[48px] sm:text-[44px] text-[32px] xl:mb-5 lg:mb-5 md:mb-5 sm:mb-4 mb-0">DEMOGRAPHICS</div>
-        <div className="h-[48px] text-[14px] font-[400] leading-[4px]">
+        <div className="xl:h-[48px] lg:h-[48px] md:h-[48px] sm:h-[48px] h-[32px] text-[14px] font-[400] leading-[4px]">
           PREDICTED RACE, AGE, & SEX
         </div>
       </header>
-      <div className="xl:h-[calc(100vh-200px)] lg:h-[calc(100vh-200px)] md:h-[calc(100vh-200px)] sm:h-[500px] h-[500px] flex justify-between xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:pt-12 lg:pt-12 md:pt-12 sm:pt-4 px-6 gap-3 xl:gap-8 lg:gap-6 md:gap-4 sm:gap-3">
-        <div className="min-w-[160px] xl:w-[12%] lg:w-[14%] md:w-[19%] sm:w-[100%] w-[100%] xl:h-[452px] lg:h-[452px] md:h-[452px] sm:h-[100px] h-[100px] flex xl:flex-col lg:flex-col md:flex-col sm:flex-row gap-2">
+      <div className="xl:h-[calc(100vh-200px)] lg:h-[calc(100vh-200px)] md:h-[calc(100vh-200px)] sm:h-[500px] h-[430px] flex justify-between xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:pt-12 lg:pt-12 md:pt-12 sm:pt-4 px-6 gap-3 xl:gap-8 lg:gap-6 md:gap-4 sm:gap-3">
+        <div className="min-w-[160px] xl:w-[12%] lg:w-[14%] md:w-[19%] sm:w-[100%] w-[100%] xl:h-[452px] lg:h-[452px] md:h-[452px] sm:h-[100px] h-[70px] flex xl:flex-col lg:flex-col md:flex-col sm:flex-row gap-2">
           <SidebarOptionCard
             label="RACE"
             selectedLabel={selectedRace}

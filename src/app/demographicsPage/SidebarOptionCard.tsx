@@ -20,7 +20,7 @@ const SidebarOptionCard: React.FC<SidebarOptionCardProps> = ({
 }) => {
   return (
     <div
-      className="w-full h-[90px] relative cursor-pointer group border-t-2 border-black"
+      className="w-full xl:h-[90px] lg:h-[90px] md:h-[90px] sm:h-[90px] h-[70px] relative cursor-pointer group border-t-2 border-black"
       onClick={onClick}
     >
       <div

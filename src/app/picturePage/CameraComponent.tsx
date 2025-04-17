@@ -294,7 +294,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
       )}
       {!isFullScreen ? (
         <>
-          <div className="absolute xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[55%] -left-[44%]">
+          <div className="absolute xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[50%] -left-[44%]">
             <div className="relative">
               <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[380px] md:h-[380px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
                 <PictureSquares size="small" />
@@ -307,7 +307,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
                       alt="camera icon"
                       width={100}
                       height={100}
-                      className="absolute xl:left-[10%] lg:left-[10%] md:left-[40%] sm:left-[36%] left-[36%] xl:top-[2%] lg:top-[2%] md:top-[4%] sm:top-[4%] -top-[43%] peer hover:scale-110 hover:rotate-180 hover:cursor-pointer transition-all duration-700 ease-in-out z-2 w-[80px] 2xl:w-[100px] xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px]"
+                      className="absolute xl:left-[10%] lg:left-[10%] md:left-[40%] sm:left-[36%] left-[42%] xl:top-[2%] lg:top-[2%] md:top-[4%] sm:top-[4%] -top-[39%] peer hover:scale-110 hover:rotate-180 hover:cursor-pointer transition-all duration-700 ease-in-out z-2 w-[60px] 2xl:w-[100px] xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px]"
                       style={{ height: "auto" }}
                       onClick={handleCameraClick}
                     />
@@ -319,7 +319,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
                 alt="camera text"
                 width={230}
                 height={230}
-                className="absolute xl:-top-[26%] lg:-top-[26%] md:-top-[20.5%] sm:-top-[21%] -top-[22%] xl:left-[56%] lg:left-[56%] md:left-[55%] sm:left-[56%] left-[56%] w-[170px] 2xl:w-[230px] xl:w-[230px] lg:w-[230px] md:w-[170px] sm:w-[170px]"
+                className="absolute xl:-top-[26%] lg:-top-[26%] md:-top-[20.5%] sm:-top-[21%] -top-[20%] xl:left-[56%] lg:left-[56%] md:left-[55%] sm:left-[56%] left-[54%] w-[150px] 2xl:w-[230px] xl:w-[230px] lg:w-[230px] md:w-[170px] sm:w-[170px]"
                 style={{ height: "auto" }}
               />
             </div>

@@ -108,7 +108,7 @@ export const PictureSquares = ({
             alt="small square"
             width={small}
             height={small}
-            className={`absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${smallRotation} xl:w-[300px] lg:w-[300px] md:w-[200px] sm:w-[200px] w-[200px]`}
+            className={`absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${smallRotation} xl:w-[300px] lg:w-[300px] md:w-[200px] sm:w-[200px] w-[150px]`}
             style={{ height: "auto" }}
           />
           <Image
@@ -116,7 +116,7 @@ export const PictureSquares = ({
             alt="medium square"
             width={medium}
             height={medium}
-            className={`absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${mediumRotation} xl:w-[350px] lg:w-[350px] md:w-[250px] sm:w-[250px] w-[250px]`}
+            className={`absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${mediumRotation} xl:w-[350px] lg:w-[350px] md:w-[250px] sm:w-[250px] w-[200px]`}
             style={{ height: "auto" }}
           />
           <Image
@@ -124,7 +124,7 @@ export const PictureSquares = ({
             alt="large square"
             width={large}
             height={large}
-            className={`absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${largeRotation} xl:w-[400px] lg:w-[400px] md:w-[300px] sm:w-[300px] w-[300px]`}
+            className={`absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 ${largeRotation} xl:w-[400px] lg:w-[400px] md:w-[300px] sm:w-[300px] w-[250px]`}
             style={{ height: "auto" }}
           />
         </>

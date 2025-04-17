@@ -19,7 +19,7 @@ const DemographicsDisplay: React.FC<DemographicsDisplayProps> = ({
       alt="demographics display"
       width={900}
       height={500}
-      className="w-full xl:h-[450px] lg:h-[450px] md:h-[450px] sm:h-[200px] h-[200px] border-t-2 border-black"
+      className="w-full xl:h-[450px] lg:h-[450px] md:h-[450px] sm:h-[200px] h-[160px] border-t-2 border-black"
     />
     <p className="absolute top-[3%] left-[2%] text-[24px]">
       {selectedOptionText}
@@ -28,7 +28,7 @@ const DemographicsDisplay: React.FC<DemographicsDisplayProps> = ({
       <CircularProgress
         percentage={confidence}
         isVisible={isVisible}
-        className="xl:w-[300px] xl:h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] w-[200px] h-[200px]"
+        className="xl:w-[300px] xl:h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] w-[160px] h-[160px]"
       />
     </div>
   </div>

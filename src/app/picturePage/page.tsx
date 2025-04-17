@@ -92,7 +92,7 @@ const PicturePage = () => {
             </div>
           </div>
           <div
-            className="absolute left-[2%] xl:bottom-[4%] lg:bottom-[4%] md:bottom-[4%] sm:bottom-[4%] bottom-[8.5%] hover:cursor-pointer"
+            className="absolute left-[2%] xl:bottom-[4%] lg:bottom-[4%] md:bottom-[4%] sm:bottom-[4%] bottom-[12%] hover:cursor-pointer"
             onClick={() => router.push("/locationPage")}
           >
             <Image
