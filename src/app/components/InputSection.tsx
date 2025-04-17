@@ -20,7 +20,7 @@ export const InputSection = ({
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    // Auto-capitalize the first letter of each word
+
     const capitalized = value.split(' ').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
     ).join(' ');

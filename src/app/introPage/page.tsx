@@ -51,7 +51,7 @@ const IntroPage = () => {
           value={inputValue}
           onChange={(e) => {
             const value = e.target.value;
-            // Auto-capitalize the first letter of each word
+
             const capitalized = value.split(' ').map(word => 
               word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
             ).join(' ');

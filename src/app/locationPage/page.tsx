@@ -23,7 +23,6 @@ const LocationPage = () => {
   }, [router]);
 
   const isValidInput = (text: string) => {
-    // Check if it's only letters, spaces, and commas, and properly capitalized
     return /^[A-Za-z\s,]+$/.test(text) && isValidCapitalizedWords(text);
   };
 
@@ -38,7 +37,6 @@ const LocationPage = () => {
         await submitUserInfo(userName, inputValue);
         setSuccessMessage(`Success! Added ${userName} from ${inputValue}`);
         
-        // Clear the message after 3 seconds and proceed
         setTimeout(() => {
           router.push("/picturePage");
         }, 2000);
@@ -75,7 +73,7 @@ const LocationPage = () => {
           value={inputValue}
           onChange={(e) => {
             const value = e.target.value;
-            // Auto-capitalize the first letter of each word
+
             const capitalized = value.split(' ').map(word => 
               word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
             ).join(' ');

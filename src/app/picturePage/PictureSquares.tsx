@@ -75,7 +75,6 @@ export const PictureSquares = ({
   return (
     <div className={`relative ${className}`}>
       {isLoadingScreen ? (
-        // Loading screen layout
         <>
           <Image
             src="/Intro-square-s.png"
@@ -103,7 +102,6 @@ export const PictureSquares = ({
           />
         </>
       ) : (
-        // Normal layout (camera/gallery pages)
         <>
           <Image
             src="/Intro-square-s.png"

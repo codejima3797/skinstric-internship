@@ -8,7 +8,7 @@ interface CircularProgressProps {
 
 const CircularProgress = ({ percentage, isVisible, className = '' }: CircularProgressProps) => {
   const [progress, setProgress] = useState(0);
-  const radius = 45;  // Reduced radius to fit within viewBox
+  const radius = 45;
   const circumference = 2 * Math.PI * radius;
 
   useEffect(() => {
@@ -34,7 +34,6 @@ const CircularProgress = ({ percentage, isVisible, className = '' }: CircularPro
     }
   }, [percentage, isVisible, progress]);
 
-  // Ensure strokeDashoffset is always a valid number
   const strokeDashoffset = Math.max(0, circumference - ((progress || 0) / 100) * circumference);
 
   return (

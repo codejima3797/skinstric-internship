@@ -148,7 +148,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
   useEffect(() => {}, [isFullScreen, videoReady, initialStream]);
 
   useEffect(() => {
-    // Check if device is mobile
+
     const checkMobile = () => {
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       setIsMobile(isMobileDevice);
@@ -161,11 +161,11 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
   const startCamera = async () => {
     try {
       if (isMobile) {
-        // Create a file input element for mobile devices
+
         const input = document.createElement('input');
         input.type = 'file';
         input.accept = 'image/*';
-        input.capture = 'environment'; // Use back camera if available
+        input.capture = 'user';
         
         input.onchange = async (e) => {
           const file = (e.target as HTMLInputElement).files?.[0];

@@ -46,13 +46,11 @@ const DemographicsPage = () => {
       const parsedData = JSON.parse(storedData);
       setDemographicsData(parsedData);
       
-      // Set initial race selection
       const firstRace = Object.entries(parsedData.race || {}).sort(
         ([, a], [, b]) => (b as number) - (a as number)
       )[0]?.[0];
       setSelectedRace(firstRace || null);
       
-      // Set initial age selection
       const ageValues = ageRanges.map((range) => {
         const key = range === "0-9" ? "3-9" : range;
         return { range, value: parsedData.age[key] || 0 };
@@ -67,7 +65,6 @@ const DemographicsPage = () => {
       )[0]?.range;
       setSelectedAge(highestAge || null);
       
-      // Set initial sex selection
       const firstSex = Object.entries(parsedData.gender || {}).sort(
         ([, a], [, b]) => (b as number) - (a as number)
       )[0]?.[0];
@@ -89,14 +86,13 @@ const DemographicsPage = () => {
           isSelected: selectedRace === race,
         }));
     } else if (selectedOption === "age") {
-      // Get all age values and calculate total
+
       const ageValues = ageRanges.map((range) => {
         const key = range === "0-9" ? "3-9" : range;
         return demographicsData.age[key] || 0;
       });
       const total = ageValues.reduce((sum, value) => sum + value, 0);
 
-      // Normalize values to sum to 1 (100%)
       return ageRanges.map((range, index) => {
         const normalizedValue = total > 0 ? ageValues[index] / total : 0;
         return {
@@ -106,11 +102,10 @@ const DemographicsPage = () => {
         };
       });
     } else if (selectedOption === "sex") {
-      // Get gender values and calculate total
+
       const genderValues = Object.values(demographicsData.gender);
       const total = genderValues.reduce((sum, value) => sum + value, 0);
 
-      // Normalize values to sum to 1 (100%) and sort by confidence
       return Object.entries(demographicsData.gender)
         .sort(([, a], [, b]) => b - a)
         .map(([gender, value]) => {
@@ -163,7 +158,7 @@ const DemographicsPage = () => {
       const confidence = demographicsData.race[selectedRace];
       return Math.round(confidence * 100);
     } else if (selectedOption === "age" && selectedAge) {
-      // Map the selected age range to the correct data key
+
       const ageKey = selectedAge === "0-9" ? "3-9" : selectedAge;
       const ageValues = Object.values(demographicsData.age);
       const total = ageValues.reduce((sum, value) => sum + value, 0);
@@ -213,7 +208,7 @@ const DemographicsPage = () => {
             isSelected={selectedOption === "age"}
             onClick={() => {
               setSelectedOption("age");
-              // Find age with highest percentage
+
               const ageValues = ageRanges.map((range) => {
                 const key = range === "0-9" ? "3-9" : range;
                 return { range, value: demographicsData?.age[key] || 0 };
