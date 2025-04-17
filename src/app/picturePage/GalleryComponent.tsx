@@ -78,7 +78,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
       </div>
       {uploadedImage && (
         <div
-          className="absolute xl:bottom-[10%] lg:bottom-[9%] md:bottom-[6.5%] sm:bottom-[6%] bottom-[12.2%] xl:right-[4%] lg:right-[4%] md:right-[4%] sm:right-[4%] -right-[45%] z-50 w-[120px] h-[46px] cursor-pointer"
+          className="absolute xl:bottom-[3%] lg:bottom-[3%] md:bottom-[2.5%] sm:bottom-[2%] bottom-[23%] xl:right-[4%] lg:right-[4%] md:right-[4%] sm:right-[4%] -right-[45%] z-50 w-[120px] h-[46px] cursor-pointer"
           onClick={onProceed}
         >
           <Image
