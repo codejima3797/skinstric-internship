@@ -89,7 +89,7 @@ const LocationPage = () => {
           }}
         />
         {successMessage && (
-          <div className="text-black xl:text-4xl lg:text-3xl md:text-xl sm:text-xl text-xl absolute right-[3%] bottom-[20%]">
+          <div className="text-black xl:text-4xl lg:text-3xl md:text-xl sm:text-xl text-sm absolute right-[3%] bottom-[20%]">
             {successMessage}
           </div>
         )}
