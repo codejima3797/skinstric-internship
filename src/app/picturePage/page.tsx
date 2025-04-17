@@ -71,9 +71,9 @@ const PicturePage = () => {
         <Navbar variant="intro" isInverted={isCameraActive} />
       </div>
       {!isCameraActive ? (
-        <div className="w-full h-full">
+        <div className="w-full h-screen overflow-hidden">
           <PageHeader />
-          <div className="w-full h-full xl:flex lg:flex md:flex sm:flex flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col justify-center items-center">
+          <div className="w-full h-[calc(100vh-64px)] xl:flex lg:flex md:flex sm:flex flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col justify-center items-center">
             <div className="w-[50%] h-full flex items-center justify-center relative">
               <CameraComponent 
                 onCapture={handleCapture} 

@@ -265,7 +265,7 @@ const DemographicsPage = () => {
           />
         </div>
       </div>
-      <div className="w-full absolute bottom-[4%] flex items-center justify-between px-7">
+      <div className="w-full absolute bottom-[4%] flex items-center justify-between pl-3 pr-7">
         <Image
           src="/button-icon-text-back-b.png"
           alt="back button"
@@ -277,20 +277,20 @@ const DemographicsPage = () => {
         <p className="xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[14px] text-[12px] opacity-40 text-center px-2">
           If A.I. estimate is wrong, select the correct one.
         </p>
-        <div className="flex gap-3 pr-2">
+        <div className="flex xl:gap-3 lg:gap-3 md:gap-3 sm:gap-3 gap-2 pr-2 xl:h-[40px] lg:h-[40px] md:h-[40px] sm:h-[30px] h-[20px]">
           <Image
             src="/button-reset.png"
             alt="reset button"
             width={60}
             height={60}
-            className="cursor-not-allowed"
+            className="cursor-not-allowed xl:w-[60px] lg:w-[60px] md:w-[60px] sm:w-[50px] w-[40px]"
           />
           <Image
             src="/button-confirm.png"
             alt="confirm button"
             width={70}
             height={70}
-            className="cursor-pointer"
+            className="cursor-pointer xl:w-[70px] lg:w-[70px] md:w-[70px] sm:w-[60px] w-[50px]"
             onClick={() => router.push("/analysisPage")}
           />
         </div>
