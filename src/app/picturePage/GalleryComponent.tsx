@@ -7,13 +7,11 @@ import { PictureSquares } from "./PictureSquares";
 interface GalleryComponentProps {
   onUploadSuccess: (imageBase64: string) => void;
   onUploadError: (error: Error) => void;
-  onProceed: () => void;
 }
 
 const GalleryComponent: React.FC<GalleryComponentProps> = ({
   onUploadSuccess,
   onUploadError,
-  onProceed,
 }) => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
 
@@ -40,7 +38,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
 
   return (
     <div className="w-full h-full relative">
-      <div className="absolute xl:top-[45%] xl:right-[30%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[40%] -right-[35%]">
+      <div className="absolute xl:top-[45%] xl:right-[30%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[45%] -right-[35%]">
         <div className="relative">
           <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[350px] md:h-[350px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
             <PictureSquares size="small" />
@@ -76,20 +74,6 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
           />
         </div>
       </div>
-      {uploadedImage && (
-        <div
-          className="absolute xl:-bottom-[4.35%] lg:-bottom-[4.25%] md:-bottom-[4.25%] sm:-bottom-[4.35%] bottom-[8.8%] xl:right-[4%] lg:right-[4%] md:right-[4%] sm:right-[4%] -right-[45%] w-[120px] h-[46px] cursor-pointer z-[100]"
-          onClick={onProceed}
-        >
-          <Image
-            src="/button-icon-text-proceed.png"
-            alt="proceed"
-            width={120}
-            height={120}
-            style={{ height: "auto" }}
-          />
-        </div>
-      )}
     </div>
   );
 };

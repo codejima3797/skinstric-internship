@@ -87,21 +87,30 @@ const PicturePage = () => {
               <GalleryComponent
                 onUploadSuccess={handleUploadSuccess}
                 onUploadError={handleUploadError}
-                onProceed={handleProceed}
               />
             </div>
           </div>
-          <div
-            className="absolute left-[2%] xl:bottom-[4%] lg:bottom-[4%] md:bottom-[4%] sm:bottom-[4%] bottom-[12%] hover:cursor-pointer"
-            onClick={() => router.push("/locationPage")}
-          >
-            <Image
-              src="/button-icon-text-back.png"
-              alt="back button"
-              width={100}
-              height={100}
-              style={{ height: "auto" }}
-            />
+          <div className="w-full absolute xl:bottom-[4%] lg:bottom-[4%] md:bottom-[4%] sm:bottom-[4%] bottom-[12%] flex items-center justify-between px-3 z-[100]">
+            <div className="w-[100px] h-[46px] cursor-pointer" onClick={() => router.push("/locationPage")}>
+              <Image
+                src="/button-icon-text-back.png"
+                alt="back button"
+                width={100}
+                height={100}
+                style={{ height: "auto" }}
+              />
+            </div>
+            {uploadedImageData && (
+              <div className="w-[120px] h-[46px] cursor-pointer" onClick={handleProceed}>
+                <Image
+                  src="/button-icon-text-proceed.png"
+                  alt="proceed"
+                  width={120}
+                  height={120}
+                  style={{ height: "auto" }}
+                />
+              </div>
+            )}
           </div>
         </div>
       ) : (
