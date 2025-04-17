@@ -23,25 +23,25 @@ const AnalysisDiamond = ({
     if (title === "SKIN TYPE DETAILS") {
       return (
         <div className="flex flex-col items-center">
-          <p className="xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">SKIN TYPE</p>
-          <p className="xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">DETAILS</p>
+          <p className="2xl:text-[12px] xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">SKIN TYPE</p>
+          <p className="2xl:text-[12px] xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">DETAILS</p>
         </div>
       );
     }
     if (title === "COSMETIC CONCERNS") {
       return (
         <div className="flex flex-col items-center">
-          <p className="xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">COSMETIC</p>
-          <p className="xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">CONCERNS</p>
+          <p className="2xl:text-[12px] xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">COSMETIC</p>
+          <p className="2xl:text-[12px] xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">CONCERNS</p>
         </div>
       );
     }
-    return <p className="xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">{title}</p>;
+    return <p className="2xl:text-[12px] xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] text-[10px] font-semibold text-center">{title}</p>;
   };
 
   return (
     <div
-      className={`xl:w-[150px] xl:h-[150px] lg:w-[150px] lg:h-[150px] md:w-[150px] md:h-[150px] sm:w-[100px] sm:h-[100px] w-[100px] h-[100px] absolute ${top} ${left} mobile:left-[${parseInt(left.split('[')[1].split('%]')[0]) - 5}%] ${isClickable ? 'cursor-pointer z-20' : 'hover:cursor-not-allowed z-10'}`}
+      className={`2xl:w-[150px] 2xl:h-[150px] xl:w-[150px] xl:h-[150px] lg:w-[150px] lg:h-[150px] md:w-[150px] md:h-[150px] sm:w-[100px] sm:h-[100px] w-[100px] h-[100px] absolute ${top} ${left} mobile:left-[${parseInt(left.split('[')[1].split('%]')[0]) - 5}%] ${isClickable ? 'cursor-pointer z-20' : 'hover:cursor-not-allowed z-10'}`}
       style={{
         clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'
       }}

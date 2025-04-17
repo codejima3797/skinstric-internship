@@ -294,12 +294,12 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
       )}
       {!isFullScreen ? (
         <>
-          <div className="absolute xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[60%] -left-[44%]">
+          <div className="absolute 2xl:top-[45%] 2xl:left-[25%] xl:top-[45%] xl:left-[25%] lg:top-[45%] lg:left-[25%] md:top-[45%] md:left-[10%] sm:top-[45%] sm:left-[5%] top-[60%] -left-[44%]">
             <div className="relative">
-              <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[380px] md:h-[380px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
+              <div className="2xl:w-[400px] 2xl:h-[400px] xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[380px] md:h-[380px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
                 <PictureSquares size="small" />
               </div>
-              <div className="w-50 h-50 absolute xl:-top-[15%] xl:left-[31%] lg:-top-[15%] lg:left-[31%] md:-top-[13%] md:left-[18%] sm:-top-[13%] sm:left-[18%] top-[13%] left-[18%]">
+              <div className="w-50 h-50 absolute 2xl:-top-[15%] 2xl:left-[31%] xl:-top-[15%] xl:left-[31%] lg:-top-[15%] lg:left-[31%] md:-top-[13%] md:left-[18%] sm:-top-[13%] sm:left-[18%] top-[13%] left-[18%]">
                 <div className="w-full h-full relative">
                   <label htmlFor="camera-input">
                     <Image
@@ -307,7 +307,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
                       alt="camera icon"
                       width={100}
                       height={100}
-                      className="absolute xl:left-[10%] lg:left-[10%] md:left-[40%] sm:left-[36%] left-[42%] xl:top-[2%] lg:top-[2%] md:top-[4%] sm:top-[4%] -top-[39%] peer hover:scale-110 hover:rotate-180 hover:cursor-pointer transition-all duration-700 ease-in-out z-2 w-[60px] 2xl:w-[100px] xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px]"
+                      className="absolute 2xl:left-[10%] xl:left-[10%] lg:left-[10%] md:left-[40%] sm:left-[36%] left-[42%] 2xl:top-[2%] xl:top-[2%] lg:top-[2%] md:top-[4%] sm:top-[4%] -top-[39%] peer hover:scale-110 hover:rotate-180 hover:cursor-pointer transition-all duration-700 ease-in-out z-2 w-[60px] 2xl:w-[100px] xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px]"
                       style={{ height: "auto" }}
                       onClick={handleCameraClick}
                     />
@@ -319,7 +319,7 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
                 alt="camera text"
                 width={230}
                 height={230}
-                className="absolute xl:-top-[26%] lg:-top-[26%] md:-top-[20.5%] sm:-top-[21%] -top-[20%] xl:left-[56%] lg:left-[56%] md:left-[55%] sm:left-[56%] left-[54%] w-[150px] 2xl:w-[230px] xl:w-[230px] lg:w-[230px] md:w-[170px] sm:w-[170px]"
+                className="absolute 2xl:-top-[26%] xl:-top-[26%] lg:-top-[26%] md:-top-[20.5%] sm:-top-[21%] -top-[20%] 2xl:left-[56%] xl:left-[56%] lg:left-[56%] md:left-[55%] sm:left-[56%] left-[54%] w-[150px] 2xl:w-[230px] xl:w-[230px] lg:w-[230px] md:w-[170px] sm:w-[170px]"
                 style={{ height: "auto" }}
               />
             </div>
@@ -345,10 +345,10 @@ const CameraComponent: React.FC<CameraComponentProps> = ({
                         alt="camera icon"
                         width={100}
                         height={100}
-                        className="animate-spin xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px] w-[70px]"
+                        className="animate-spin 2xl:w-[100px] xl:w-[100px] lg:w-[100px] md:w-[80px] sm:w-[80px] w-[70px]"
                         style={{ height: "auto" }}
                       />
-                      <div className="text-black font-semibold xl:text-sm lg:text-sm md:text-xs sm:text-xs text-[10px] xl:mt-4 lg:mt-4 md:mt-4 sm:mt-2 mt-2 text-center">
+                      <div className="text-black font-semibold xl:text-sm lg:text-sm md:text-xs sm:text-xs text-[10px] 2xl:mt-4 xl:mt-4 lg:mt-4 md:mt-4 sm:mt-2 mt-2 text-center">
                         SETTING UP CAMERA...
                       </div>
                     </div>

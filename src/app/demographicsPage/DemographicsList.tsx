@@ -36,7 +36,7 @@ const DemographicsList: React.FC<DemographicsListProps> = ({
           </div>
           <div>A.I. Confidence %</div>
         </div>
-        <div className="w-full xl:flex lg:flex md:flex sm:grid grid flex-col sm:grid-cols-3 grid-cols-3 gap-3 pt-3">
+        <div className="w-full 2xl:flex xl:flex lg:flex md:flex sm:grid grid flex-col sm:grid-cols-3 grid-cols-3 gap-3 pt-3">
           {items.map((item, index) => (
             <div
               key={index}

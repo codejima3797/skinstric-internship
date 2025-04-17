@@ -5,8 +5,8 @@ interface CameraPermissionPopupProps {
 
 export const CameraPermissionPopup = ({ onAllow, onDeny }: CameraPermissionPopupProps) => {
   return (
-    <div className="absolute xl:top-[50%] lg:top-[52%] md:top-[52%] sm:top-[52%] top-[75%] xl:left-[60%] lg:left-[20%] md:left-[20%] sm:left-[20%] -left-[3%] z-50">
-      <div className="bg-black pt-4 xl:w-[320px] lg:w-[320px] md:w-[280px] sm:w-[280px] w-[200px]">
+    <div className="absolute 2xl:top-[50%] xl:top-[50%] lg:top-[52%] md:top-[52%] sm:top-[52%] top-[75%] 2xl:left-[60%] xl:left-[60%] lg:left-[20%] md:left-[20%] sm:left-[20%] -left-[3%] z-50">
+      <div className="bg-black pt-4 2xl:w-[320px] xl:w-[320px] lg:w-[320px] md:w-[280px] sm:w-[280px] w-[200px]">
         <h2 className="text-white text-[14px] font-medium text-center border-b border-white pb-12">
           ALLOW A.I. TO ACCESS YOUR CAMERA
         </h2>

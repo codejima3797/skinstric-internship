@@ -13,7 +13,7 @@ export default function Home() {
         alt="enter code button"
         width={100}
         height={100}
-        className="absolute top-[2%] right-[3%] cursor-not-allowed w-[50px] md:w-[75px] lg:w-[100px] h-auto"
+        className="absolute top-[2%] right-[3%] cursor-not-allowed w-[50px] sm:w-[75px] md:w-[75px] lg:w-[100px] xl:w-[100px] 2xl:w-[100px] h-auto"
       />
       <div className="w-full h-[calc(100vh-80px)] flex items-center justify-center relative">
         <div className="w-full flex flex-col sm:flex-row items-center justify-between">
@@ -32,7 +32,7 @@ export default function Home() {
           alt="description"
           width={270}
           height={60}
-          className="absolute h-auto w-[200px] md:w-[240px] lg:w-[270px] left-4 xl:bottom-0 lg:[2%] md:bottom-[2%] sm:bottom-[3%] bottom-[8%] md:left-[2%]"
+          className="absolute h-auto w-[200px] md:w-[240px] lg:w-[270px] xl:w-[270px] 2xl:w-[270px] left-4 2xl:bottom-0 xl:bottom-0 lg:[2%] md:bottom-[2%] sm:bottom-[3%] bottom-[8%] md:left-[2%]"
         />
       </div>
     </div>
