@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { PictureSquares } from "./PictureSquares";
 
 interface GalleryComponentProps {
@@ -13,8 +13,6 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
   onUploadSuccess,
   onUploadError,
 }) => {
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
-
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
@@ -24,7 +22,6 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
       reader.onload = (e) => {
         const base64String = e.target?.result as string;
         const base64Data = base64String.split(',')[1] || base64String;
-        setUploadedImage(base64String);
         onUploadSuccess(base64Data);
       };
       reader.onerror = () => {
