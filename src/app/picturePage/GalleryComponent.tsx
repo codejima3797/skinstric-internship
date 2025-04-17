@@ -40,7 +40,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
 
   return (
     <div className="w-full h-full relative">
-      <div className="absolute xl:top-[40%] xl:right-[25%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[35%] -right-[35%]">
+      <div className="absolute xl:top-[45%] xl:right-[30%] lg:top-[45%] lg:right-[25%] md:top-[45%] md:right-[10%] sm:top-[45%] sm:right-[5%] top-[35%] -right-[35%]">
         <div className="relative">
           <div className="xl:w-[400px] xl:h-[400px] lg:w-[400px] lg:h-[400px] md:w-[350px] md:h-[350px] sm:w-[350px] sm:h-[350px] w-[350px] h-[350px]">
             <PictureSquares size="small" />
@@ -78,7 +78,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
       </div>
       {uploadedImage && (
         <div
-          className="absolute xl:bottom-[3%] lg:bottom-[3%] md:bottom-[2.5%] sm:bottom-[2%] bottom-[23%] xl:right-[4%] lg:right-[4%] md:right-[4%] sm:right-[4%] -right-[45%] z-50 w-[120px] h-[46px] cursor-pointer"
+          className="absolute xl:-bottom-[4.35%] lg:-bottom-[4.25%] md:-bottom-[4.25%] sm:-bottom-[4.35%] bottom-[9%] xl:right-[4%] lg:right-[4%] md:right-[4%] sm:right-[4%] -right-[45%] w-[120px] h-[46px] cursor-pointer z-[100]"
           onClick={onProceed}
         >
           <Image
